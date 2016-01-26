@@ -43,7 +43,7 @@ include_once("ConectionDB.php");
 			//____construimos el string sql que vamos ha ejecutar
 			$sql='INSERT INTO '.$tabla.' '.$col.' VALUES '.$val;
 
-			$XX=fopen("/var/www/html/proyecto_mery/insertar.txt","a");
+			$XX=fopen("/var/www/html/SisAlcaldia/insertar.txt","a");
 			fputs($XX,date("d/m/Y h:i a",time())."\r\n".$sql."\r\n\r\n"); 
 
 			$resp=$this->mbd->consulta($sql);
@@ -62,7 +62,7 @@ include_once("ConectionDB.php");
             }                        
             $cadena=substr($cadena,0,strlen($cadena)-2);
             $sql='UPDATE '.$tabla.' SET '.$cadena.' WHERE '.$condicion;
-$XX=fopen("/var/www/html/proyecto_mery/modificar.txt","a");
+$XX=fopen("/var/www/html/SisAlcaldia/modificar.txt","a");
 fputs($XX,date("d/m/Y h:i a",time())."\r\n".$sql."\r\n\r\n");
 
 			$resp=$this->mbd->consulta($sql);
@@ -74,7 +74,7 @@ fputs($XX,date("d/m/Y h:i a",time())."\r\n".$sql."\r\n\r\n");
 		public function eliminar($tabla, $condicion)
         {	//____ini_eliminar
 			$sql='DELETE FROM '.$tabla.' WHERE '.$condicion;
-$XX=fopen("/var/www/html/proyecto_mery/eliminar.txt","a");
+$XX=fopen("/var/www/html/SisAlcaldia/eliminar.txt","a");
 fputs($XX,date("d/m/Y h:i a",time())."\r\n".$sql."\r\n\r\n");
 			//echo $sql;
 			$resp=$this->mbd->consulta($sql);
@@ -83,7 +83,7 @@ fputs($XX,date("d/m/Y h:i a",time())."\r\n".$sql."\r\n\r\n");
 
         public function consultar($sql,$tipo)
         {	//____ini_consultar
-$XX=fopen("/var/www/html/proyecto_mery/consultar.txt","a");
+$XX=fopen("/var/www/html/SisAlcaldia/consultar.txt","a");
 fputs($XX,date("d/m/Y h:i a",time())."\r\n".$sql."\r\n\r\n");
 	        $this->mbd->consulta($sql);
 

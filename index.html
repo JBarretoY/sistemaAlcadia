@@ -1,21 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 	<title>Inicio de Sesion</title>
+	<meta charset="utf-8"> 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
 	<link rel="stylesheet" type="text/css" href="css/css/font-awesome.css">
 </head>
 <body>
+<h1 class="text-center">Inicio de Sesion</h1>
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-lg-12">
-			<h1 class="text-center">Sistema hola555fhthft</h1>
+		<div class="col-lg-4"></div>
+		<div class="col-lg-4">
+			<div class="panel panel-default">
+			  <div class="panel-body">
+			  	<form>
+				  <div class="form-group">
+				    <label for="usu">Usuario</label>
+				    <input type="text" class="form-control" id="usu" placeholder="Usuario">
+				  </div>
+				  <div class="form-group">
+				    <label for="pass">Constraseña</label>
+				    <input type="password" class="form-control" id="pass" placeholder="Constraseña">
+				  </div>
+				  <button type="button" id="send" class="btn btn-default">Iniciar <span class="fa fa-paper-plane-o">
+				  </span></button>
+				</form>
+			  </div>
+			</div>
 		</div>
+		<div class="col-lg-4"></div>
 	</div>
 </div>
 <script src="js/jquery-1.12.0.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src="controlador/js/sesion.js"></script>
 <script src="js/layout.js"></script>
 </body>
 </html>

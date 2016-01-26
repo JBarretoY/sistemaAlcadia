@@ -91,7 +91,7 @@ $ADODB_FETCH_MODE = ADODB_FETCH_ASSOC;
 			for ($i=0;$i<$numConsultas;$i++){
 				$sql=$arreglo[$i];
 
-				$XX=fopen("/var/www/html/proyecto_mery/transacciones.txt","a");
+				$XX=fopen("/var/www/html/SisAlcaldia/transacciones.txt","a");
 				fputs($XX,date("d/m/Y h:i a",time())."\r\n".$sql."\r\n\r\n");
 				$this->sql = $arreglo[$i];
 				$this->oBD->Execute($arreglo[$i]);

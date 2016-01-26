@@ -12,7 +12,7 @@
 	//--------------------------------BASE DE DATOS--------------------------------
 
 	define("SERVIDOR","localhost");//define el IP para la conexion a la base de datos
-	define("BD","ambu");//define el nombre de la base de datos
+	define("BD","alcaldia");//define el nombre de la base de datos
 	define("PUERTO","5432");//define el Puerto de la conexion a la base de datos
 	define("USUARIO","postgres");//define el usuario para la conexion a la base de datos
 	define("CLAVE","1234");//define la clave para la conexion a la base de datos

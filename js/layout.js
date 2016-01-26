@@ -1,3 +1,10 @@
 $(document).on('ready',function(){
-	alert("Hola Mundo")
+	//Escuchador de Eventos
+	$('#send').click(function() {
+		iniciarSesion();
+	});
+
+	$("#close").click(function() {
+		cerrarSesion();
+	});
 });
